@@ -10,16 +10,16 @@ package linklist;
 
 public class t707 {
     int size;
-    listNode head;
+     ListNode head;
     public t707(){
         size = 0;
-        head = new listNode(0);
+        head = new ListNode(0);
     }
     public int get(int index) {
         if(index<0||index>=size){
             return -1;
         }
-        listNode cur = head.next;
+        ListNode cur = head.next;
         while (index!=0){
             cur = cur.next;
             index--;
@@ -28,16 +28,16 @@ public class t707 {
     }
 
     public void addAtHead(int val) {
-        listNode newNode = new listNode(val);
+        ListNode newNode = new ListNode(val);
         newNode.next = head.next;
         head.next = newNode;
         size++;
     }
 
     public void addAtTail(int val) {
-        listNode newNode = new listNode(val);
+        ListNode newNode = new ListNode(val);
         newNode.next = null;
-        listNode cur = head;
+        ListNode cur = head;
         while (cur.next!=null){
             cur = cur.next;
         }
@@ -47,8 +47,8 @@ public class t707 {
 
     public void addAtIndex(int index, int val) {
         if(index<0||index>size) return;
-        listNode newNode = new listNode(val);
-        listNode cur = head;
+        ListNode newNode = new ListNode(val);
+        ListNode cur = head;
         while (index!=0){
             cur = cur.next;
             index--;
@@ -60,7 +60,7 @@ public class t707 {
 
     public void deleteAtIndex(int index) {
         if(index<0||index>size-1) return;
-        listNode cur = head;
+        ListNode cur = head;
         while (index!=0){
             cur = cur.next;
             index--;
