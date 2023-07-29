@@ -10,6 +10,17 @@ import java.util.Queue;
  * @description:二叉树最大深度
  */
 public class t104 {
+    //二叉树的最大深度->使用后序遍历求二叉树高度=最大深度
+    public int func(TreeNode node){
+        if(node == null) return 0;
+        int height_l = func(node.left);
+        int height_r = func(node.right);
+        return Math.max(height_l, height_r)+1;
+    }
+
+
+
+
     //层序遍历？获取最大层数
     public int maxDepth(TreeNode root) {
         int res = 0;
