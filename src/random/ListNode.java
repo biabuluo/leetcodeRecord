@@ -8,6 +8,7 @@ package random;
  */
 public class ListNode {
      int val;
+     int key;
      ListNode next;
      ListNode(){}
      ListNode(int x) { val = x; }
