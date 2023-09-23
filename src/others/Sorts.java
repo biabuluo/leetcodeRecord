@@ -122,7 +122,7 @@ public class Sorts {
         }
     }
     public static void heap(int []nums){
-        //create heap
+        //create heap：记住这个 最后一个非叶子节点：len/2-1
         for(int i=nums.length/2-1;i>=0;i--){
             heapify(nums, i, nums.length);
         }
